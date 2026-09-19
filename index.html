@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Aaku ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. GIFT OPENING -->
+    <div id="gift-screen">
+        <div class="gift-container">
+            <div class="gift-box" id="gift-box">🎁</div>
+            <h2>For my Aaku ❤️</h2>
+            <p>Tumhare Ishu ki taraf se...</p>
+            <p>Thoda sa effort kiya hai maine. 😭</p>
+            <button onclick="openGift()">Open kar na 🎁</button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="hidden">
+        
+        <!-- 2. WELCOME -->
+        <section id="welcome" class="fade-section">
+            <h2>Welcome to your little corner ❤️</h2>
+            <p>Aaku, ye bas ek website nahi hai...</p>
+            <p>Ye thoda sa mera time, thoda sa effort, aur bahut saari random feelings hain. 😂</p>
+            <p>Jab bhi mood off ho, ya bas mujhe thoda miss karo...</p>
+            <p>Yahan aa jana.</p>
+        </section>
+
+        <!-- 3. 29 MAY STORY -->
+        <section id="date-story" class="fade-section">
+            <h2 class="big-date">29 MAY ❤️</h2>
+            <h3>My Birthday...</h3>
+            <p>...aur jis din main Aaku se mila.</p>
+            <div class="story-text">
+                <p>Us din mujhe bas itna pata tha ki mera birthday hai.</p>
+                <p>Mujhe kya pata tha ki usi din meri life mein ek aisi person aayegi jo itni important ho jayegi.</p>
+                <p>Birthday toh har saal aata hai...</p>
+                <p>But 29 May will always be a little different.</p>
+            </div>
+        </section>
+
+        <!-- 4. OUR REAL RELATIONSHIP -->
+        <section id="relationship" class="fade-section">
+            <h2>Hamari Story 📖</h2>
+            <div class="cards-container">
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Main Aaku ko pareshan karta hoon.</div>
+                    <div class="back">Bahut zyada. 😭</div>
+                </div>
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Phir Aaku gussa hoti hai.</div>
+                    <div class="back">Tab Ishu ko samajh aata hai ki situation serious hai. 💀</div>
+                </div>
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Phir main manaata hoon.</div>
+                    <div class="back">Kyuki tumse zyada der tak naraz rehna mujhe bhi achha nahi lagta.</div>
+                </div>
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Phir Aaku...</div>
+                    <div class="back">Mujhe maaf kar deti hai. ❤️</div>
+                </div>
+            </div>
+            <p class="final-note">Thank you for being so patient with this annoying Ishu.</p>
+        </section>
+
+        <!-- 5. MOOD BOOSTER -->
+        <section id="mood-booster" class="fade-section">
+            <h2>Jab tumhara mood off ho...</h2>
+            <p>Aaku, har din perfect nahi hota.</p>
+            <p>Kabhi sad ho, kabhi tired ho, kabhi bas chup rehna ho… that's okay.</p>
+            <p>Tumhe har waqt strong banne ki zarurat nahi hai.</p>
+            <p>Take your time.</p>
+            <p>Aur jab mann kare… apne Ishu ke paas aa jana. ❤️</p>
+            <button onclick="showMoodMessage()">Thoda comfort chahiye 🫂</button>
+            <div id="mood-output" class="hidden-message"></div>
+        </section>
+
+        <!-- 6. ISHU'S APOLOGY SECTION -->
+        <section id="apology" class="fade-section">
+            <h2>Okay... meri galtiyan bhi dekh lo 😭</h2>
+            <div class="cards-container">
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Tumhe unnecessarily pareshan karna.</div>
+                    <div class="back">Guilty 🙋‍♂️</div>
+                </div>
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Jab tum gussa ho tab bhi tumhe chhedna.</div>
+                    <div class="back">Control nahi hota yaar 😂</div>
+                </div>
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Overacting karna.</div>
+                    <div class="back">Phir innocent ban jana. 🥺</div>
+                </div>
+                <div class="interactive-card" onclick="toggleCard(this)">
+                    <div class="front">Tumhe manaane mein late hona.</div>
+                    <div class="back">I'll try to be faster ❤️</div>
+                </div>
+            </div>
+            <div class="final-note">
+                <p>Okay okay... maan liya.</p>
+                <p>Main perfect nahi hoon.</p>
+                <p>Sometimes main stupid mistakes karta hoon.</p>
+                <p>But I genuinely don't want to hurt you.</p>
+                <p>Sorry Aaku. ❤️</p>
+            </div>
+        </section>
+
+        <!-- 7. FIRST PHOTO -->
+        <section id="first-photo" class="fade-section">
+            <h2>Our First Little Memory 📸</h2>
+            <div class="photo-card">
+                <!-- Replace with actual photo -->
+                <div class="img-wrapper"><img src="images/first-photo.jpg" alt="Our First Photo" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='"></div>
+                <p class="caption">Ye photo mere liye kaafi special hai...</p>
+                <p class="caption">Because this is one of the first memories of us.</p>
+            </div>
+        </section>
+
+        <!-- 8. SPECIAL VIDEO -->
+        <section id="special-video" class="fade-section">
+            <h2>One Memory I'll Always Remember 🎥</h2>
+            <div class="video-container">
+                <video id="myVideo" src="videos/memory.mp4" controls preload="metadata"></video>
+            </div>
+            <p class="caption">Kuch memories ko explain karne ki zarurat nahi hoti...</p>
+            <p class="caption">Bas dekhte hi smile aa jaati hai. ❤️</p>
+        </section>
+
+        <!-- 9. MEMORY GALLERY -->
+        <section id="gallery" class="fade-section">
+            <h2>Hamari chhoti chhoti memories 📸</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/photo1.jpg" alt="Memory 1" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='">
+                    <p contenteditable="true">mera tamatar</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo2.jpg" alt="Memory 2" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='">
+                    <p contenteditable="true">meri rashmalai</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo3.jpg" alt="Memory 3" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='">
+                    <p contenteditable="true">meri baand</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo4.jpg" alt="Memory 4" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='">
+                    <p contenteditable="true">mera aaku</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo5.jpg" alt="Memory 5" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='">
+                    <p contenteditable="true">mera bacha</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo6.jpg" alt="Memory 6" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='">
+                    <p contenteditable="true">mera rasgula</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. THINGS I APPRECIATE ABOUT AAKU -->
+        <section id="appreciation" class="fade-section">
+            <h2>Things I Appreciate ❤️</h2>
+            <div class="cards-container">
+                <div class="interactive-card" onclick="toggleCard(this)"><div class="front">Tumhari patience.</div><div class="back">Thank you for bearing with me.</div></div>
+                <div class="interactive-card" onclick="toggleCard(this)"><div class="front">Tumhara care karna.</div><div class="back">It means the world.</div></div>
+                <div class="interactive-card" onclick="toggleCard(this)"><div class="front">Tumhara mujhe maaf kar dena.</div><div class="back">Even when I'm annoying.</div></div>
+                <div class="interactive-card" onclick="toggleCard(this)"><div class="front">Tumhari little habits.</div><div class="back">They are cute.</div></div>
+                <div class="interactive-card" onclick="toggleCard(this)"><div class="front">Tumhara way of talking.</div><div class="back">I love listening to you.</div></div>
+                <div class="interactive-card" onclick="toggleCard(this)"><div class="front">Tumhara mujhe tolerate karna. 😂</div><div class="back">Award milna chahiye tumhe.</div></div>
+            </div>
+            <p class="final-note">Bas tum Aaku ho... Wahi kaafi hai. ❤️</p>
+        </section>
+
+        <!-- 11. DAILY ISHU MESSAGE -->
+        <section id="daily-message" class="fade-section">
+            <h2>Aaku ka Daily Reminder ❤️</h2>
+            <button onclick="showDailyMessage()">Today's Ishu Message</button>
+            <div id="daily-output" class="hidden-message"></div>
+        </section>
+
+        <!-- 12. OPEN WHEN -->
+        <section id="open-when" class="fade-section">
+            <h2>Open When... 💌</h2>
+            <div class="envelope-grid">
+                <div class="envelope" onclick="openModal('sad')">Open when you're sad 😔</div>
+                <div class="envelope" onclick="openModal('angry')">Open when you're angry with Ishu 😡</div>
+                <div class="envelope" onclick="openModal('miss')">Open when you miss me 🥺</div>
+                <div class="envelope" onclick="openModal('motivation')">Open when you need motivation</div>
+                <div class="envelope" onclick="openModal('sleep')">Open when you can't sleep 🌙</div>
+                <div class="envelope" onclick="openModal('happy')">Open when you're happy 😊</div>
+            </div>
+        </section>
+
+        <!-- 13. TEXT-ONLY IMAGINATION STORY -->
+        <section id="imagination-story" class="fade-section">
+            <h2>Ek Chhoti Si Imaginary Story ✨</h2>
+            <div class="story-paragraphs">
+                <p class="scroll-fade">Imagine karo Aaku...<br>Ek din tum mere liye ready hokar room mein mera wait kar rahi ho.</p>
+                <p class="scroll-fade">Main andar aata hoon...<br>Aur tumhe dekh kar bas ek second ke liye ruk jaata hoon.</p>
+                <p class="scroll-fade">Tum:<br>'Kya hua? Aise kya dekh rahe ho? 😂'</p>
+                <p class="scroll-fade">Main:<br>'Kuch nahi... bas Aaku aaj kuch zyada hi pretty lag rahi hai.'</p>
+                <p class="scroll-fade">Tum:<br>'Ishu, bas karo. 😭'</p>
+                <p class="scroll-fade">Main:<br>'Nahi karunga.'</p>
+                <p class="scroll-fade">Tum smile karti ho aur bolti ho:<br>'Tum kabhi nahi sudhroge.'</p>
+                <p class="scroll-fade">Main:<br>'Tumhare saamne? Never. 😂'</p>
+                <p class="scroll-fade">Phir hum dono baith kar random baatein karte hain.<br>Main tumhe thoda tease karta hoon.<br>Tum mujhe daantti ho.<br>Phir dono khud hi hasne lagte hain.</p>
+                <p class="scroll-fade">Thodi der ke liye bas silence hota hai...<br>Aur woh silence bhi awkward nahi lagta.</p>
+                <p class="scroll-fade">Main bolta hoon:<br>'Aaku... mujhe aise simple moments bahut pasand hain.'</p>
+                <p class="scroll-fade">Tum:<br>'Kyun?'</p>
+                <p class="scroll-fade">Main:<br>'Because you're here.'</p>
+                <p class="scroll-fade">Aur tum bas smile karti ho.</p>
+            </div>
+        </section>
+
+        <!-- 14. ROMANTIC CHOICES -->
+        <section id="romantic-choices" class="fade-section">
+            <h2>Aaku ke saamne Ishu aa gaya… ab kya? 👀</h2>
+            <div class="choice-buttons">
+                <button onclick="showChoice('hug')">🫂 Hug karu</button>
+                <button onclick="showChoice('compliment')">😊 Compliment karu</button>
+                <button onclick="showChoice('tease')">😂 Thoda tease karu</button>
+            </div>
+            <div id="choice-output" class="hidden-message"></div>
+        </section>
+
+        <!-- 15. MUSIC -->
+        <section id="music-player" class="fade-section">
+            <h2>Bas ek song… 🎧</h2>
+            <div class="custom-audio">
+                <audio id="myAudio" src="music.mp3"></audio>
+                <div class="audio-info">
+                    <div class="album-art">🎵</div>
+                    <div class="song-details">
+                        <h4>Our Song</h4>
+                        <p>Ishu & Aaku</p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button onclick="toggleAudio()" id="playPauseBtn">▶️ Play</button>
+                    <input type="range" id="progressBar" value="0" max="100" onchange="seekAudio()">
+                </div>
+            </div>
+        </section>
+
+        <!-- 16. SECRET MESSAGE -->
+        <section id="secret-message" class="fade-section">
+            <h2>Aaku... ek secret hai 👀</h2>
+            <div id="lock-screen">
+                <p>Locked Envelope. Enter Password:</p>
+                <input type="password" id="secretPass" placeholder="Password (3 digits)">
+                <button onclick="checkPassword()">Unlock 🔓</button>
+                <p id="password-error" style="color: red; display: none;">Wrong password, try again! Hint: I love you count.</p>
+            </div>
+            <div id="secret-content" class="hidden">
+                <p>Okay... ab serious wali baat.</p>
+                <p>I know main tumhe bahut pareshan karta hoon.</p>
+                <p>I know kabhi kabhi meri wajah se tum gussa hoti ho.</p>
+                <p>And haan... main kabhi kabhi stupid bhi hota hoon. 😭</p>
+                <p>But tum mere liye genuinely important ho.</p>
+                <p>Isliye jab tum sad hoti ho...</p>
+                <p>Mera mann karta hai somehow tumhe smile kara du.</p>
+                <p>Even if mujhe 100 stupid jokes maarne pade. 😂</p>
+                <p>— Ishu ❤️</p>
+            </div>
+        </section>
+
+        <!-- 17. MINI GAME -->
+        <section id="mini-game" class="fade-section">
+            <h2>Catch the Hearts 🤍</h2>
+            <p>Score: <span id="heart-score">0</span> / 5</p>
+            <div id="game-area">
+                <!-- Hearts will be spawned here via JS -->
+            </div>
+            <div id="game-won" class="hidden">
+                <p>Yayyy! Aaku won! ❤️</p>
+                <p>Waise real life mein bhi tum mujhse hi jeet jaati ho. 😂</p>
+                <button onclick="scrollToFinal()">Last surprise...</button>
+            </div>
+        </section>
+
+        <!-- 18. FINAL MESSAGE -->
+        <section id="final-message" class="fade-section">
+            <div class="cinematic-text">
+                <p class="scroll-fade">Aaku...</p>
+                <p class="scroll-fade">Ek baat bolu?</p>
+                <p class="scroll-fade">Main perfect nahi hoon.</p>
+                <p class="scroll-fade">Main tumhe pareshan karta hoon.</p>
+                <p class="scroll-fade">Kabhi kabhi stupid mistakes bhi karta hoon.</p>
+                <p class="scroll-fade">Tum gussa hoti ho...</p>
+                <p class="scroll-fade">Main tumhe manaata hoon...</p>
+                <p class="scroll-fade">Phir tum mujhe maaf kar deti ho.</p>
+                <p class="scroll-fade">Hamari story perfect nahi hai...</p>
+                <p class="scroll-fade">But honestly...</p>
+                <p class="scroll-fade">Mujhe perfect story chahiye bhi nahi.</p>
+                <p class="scroll-fade">Mujhe bas real wali story chahiye.</p>
+                <p class="scroll-fade">Jisme hum haste hain...</p>
+                <p class="scroll-fade">Ek dusre ko pareshan karte hain...</p>
+                <p class="scroll-fade">Kabhi gussa hote hain...</p>
+                <p class="scroll-fade">Phir mana lete hain...</p>
+                <p class="scroll-fade">Aur difficult days mein ek dusre ko support karte hain.</p>
+                <p class="scroll-fade">29 May ko main sirf apna birthday celebrate kar raha tha...</p>
+                <p class="scroll-fade">Mujhe nahi pata tha ki us din Aaku meri life ki itni special memory ban jayegi. ❤️</p>
+                <p class="scroll-fade">Jab bhi mood off ho...</p>
+                <p class="scroll-fade">Yahan aa jana.</p>
+                <p class="scroll-fade">Tumhara Ishu tumhe yaad dilayega...</p>
+                <p class="scroll-fade">ki tum important ho.</p>
+                
+                <div class="credits scroll-fade">
+                    <p>Made with lots of love...</p>
+                    <p>thodi si pagalpan...</p>
+                    <p>bahut saara effort...</p>
+                    <p>and one very annoying Ishu. 😂❤️</p>
+                    <p>— Your Ishu</p>
+                </div>
+            </div>
+        </section>
+        
+        <div style="height: 100px;"></div>
+    </main>
+
+    <!-- MODAL FOR OPEN WHEN -->
+    <div id="modal-overlay" class="hidden" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
